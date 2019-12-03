@@ -17,7 +17,6 @@ stdin.on('data', (value) => {
   }
   if (Number(value) && Number(value) > 0 && typeof Number(value) === 'number') {
     setTimeout(() => {
-        process.stdout.write(value);
         process.stdout.write('\x07');
     }, value * 1000);
     }
